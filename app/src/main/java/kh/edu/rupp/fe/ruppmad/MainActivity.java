@@ -58,7 +58,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         drawerToggle.syncState();
 
         // Apply username
-        String username = getIntent().getStringExtra("username");
+        //String username = getIntent().getStringExtra("username");
+        SharedPreferences preferences = getSharedPreferences("user.pref",MODE_PRIVATE);
+        String username = preferences.getString("name","rupp");
         TextView txtUsername = (TextView) navigationHeaderView.findViewById(R.id.txt_username);
         txtUsername.setText(username);
 
@@ -70,6 +72,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()) {
             case R.id.txt_logout:
                 doLogout();
+                break;
+            case R.id.txt_edit:
+                Intent intent = new Intent(this,ProfileActivity.class);
+                startActivity(intent);
                 break;
         }
     }
@@ -118,6 +124,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         fragmentTransaction.replace(R.id.lyt_content, new DocumentsFragment());
         fragmentTransaction.commit();
     }
+    private void onAssignmentClick()
+    {
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.lyt_content, new AssignmentFragment());
+        fragmentTransaction.commit();
+    }
 
     private void addFragments() {
 
@@ -139,6 +152,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 FragmentTransaction fragmentTransaction2 = fragmentManager2.beginTransaction();
                 fragmentTransaction2.replace(R.id.lyt_content, new SettingsFragment());
                 fragmentTransaction2.commit();
+                break;
+            case R.id.mnu_assignment:
+                onAssignmentClick();
                 break;
         }
         drawerLayout.closeDrawers();

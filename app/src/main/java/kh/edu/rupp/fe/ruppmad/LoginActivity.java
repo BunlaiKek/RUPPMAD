@@ -14,6 +14,10 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 
     public static final String KEY_USERNAME = "username";
     public static final String PREFERENCE_NAME = "ruppmad.pref";
+    public static final String USER_PREFERENCE = "user.pref";
+    public static final String NAME_KEY = "name";
+    public static final String EMAIL_KEY = "email";
+    public static final String DOB_KEY = "dob";
 
     private final String USERNAME = "rupp-fe";
     private final String PASSWORD = "123456";

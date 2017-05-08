@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/ic_rupp_logo"
+        android:id="@+id/img_profile"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Name:"
+        android:layout_below="@id/img_profile"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/txt_namelabel"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/txt_namelabel"
+        android:layout_below="@id/img_profile"
+        android:layout_marginTop="20dp"
+        android:text="Sok Sao"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/txt_namecontent"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email:"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/txt_namelabel"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/txt_emaillabel"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/txt_emaillabel"
+        android:layout_below="@id/txt_namelabel"
+        android:text="Sok Sao"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/txt_emailcontent"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data of Birth:"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/txt_emaillabel"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/txt_doblabel"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/txt_doblabel"
+        android:layout_below="@id/txt_emaillabel"
+        android:text="Sok Sao"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/txt_dobcontent"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_edit"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="EDIT"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="OK"
+        android:id="@+id/btn_ok"
+        />
+</RelativeLayout>
